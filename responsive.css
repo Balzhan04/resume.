@@ -1,0 +1,56 @@
+.reveal { opacity: 0; transform: translateY(35px); transition: all 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 980px) {
+  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .projects-grid, .certificates-grid, .blog-grid, .skills-grid, .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .menu-toggle { display: block; }
+  .nav-links, .nav-actions .btn-outline { display: none; }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.75rem 1rem;
+  }
+  .logo { margin-right: 0; }
+  .menu-toggle { justify-self: end; }
+  .nav-actions {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding-bottom: 0.8rem;
+  }
+  .theme-toggle { flex: 0 0 44px; }
+  .hero { padding-top: 2rem; }
+  .hero-grid { display: block; }
+  .hero-content, .hero-visual { width: 100%; max-width: 100%; overflow: hidden; }
+  .hero h1 { font-size: 2.3rem; }
+  .hero h1 span { display: block; }
+  .hero-description { max-width: 100%; overflow-wrap: anywhere; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { width: 100%; max-width: 100%; white-space: normal; }
+  .hero-card { max-width: 100%; }
+  .projects-grid, .certificates-grid, .blog-grid, .skills-grid, .stats-grid, .achievements-grid, .footer-grid { grid-template-columns: 1fr; }
+  .info-list div { flex-direction: column; gap: 0.3rem; }
+  .contact-form { margin-top: 1rem; }
+  .nav-links.open { display: flex; flex-direction: column; width: 100%; padding-top: 1rem; grid-column: 1 / -1; }
+  .nav-links.open li { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .hero h1 { font-size: 2rem; }
+  .lang-switcher { max-width: calc(100% - 56px); }
+}

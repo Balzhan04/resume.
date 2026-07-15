@@ -1,0 +1,11 @@
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(8px) translateX(-50%); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0.25); }
+  50% { box-shadow: 0 0 0 10px rgba(56,189,248,0); }
+}
+
+.hero-card, .project-card:hover, .certificate-card:hover, .blog-card:hover { animation: pulseGlow 3s infinite; }
